@@ -11,7 +11,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9002 -c .storybook",
+    "storybook-static-build": "build-storybook -c .storybook -o storybook-static-build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -21,5 +23,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/core": "7.0.0",
+    "@storybook/react": "^4.0.9",
+    "babel-loader": "^8.0.4"
+  }
 }
