@@ -3,13 +3,7 @@ import React, { Component } from 'react';
 // Import third-party libs
 import styled, { ThemeProvider } from 'styled-components';
 import { connect } from 'react-redux';
-import { Redirect } from 'react-router-dom';
-
-// Import Components
-import Navigation from '../../components/Navigation/Navigation';
-
-// import Theme
-import defaultTheme from '../../global_config/Themes/defaultTheme';
+import { Redirect, withRouter } from 'react-router-dom';
 
 // Import actions from services
 import * as actions from '../../services/index';
@@ -63,16 +57,16 @@ class Authentication extends Component {
 
     render() {
         const { email, password } = this.state.user;
+        console.log('NOT Auth if block')
         let authRedirect = null;
-
-        if (this.props.isAuthenticated) {
-            authRedirect = <Redirect to="/landing-page/" />
+        if ( this.props.isAuthenticated ) {
+            console.log('Auth if block')
+            authRedirect = <Redirect to='/landing-page' />
         }
+
         return (
-            <ThemeProvider theme={defaultTheme}>
-                <>
+                <div>
                     {authRedirect}
-                    <Navigation />
                     <AuthForm onSubmit={this.submitHandler}>
                         <ul>
                             <li>
@@ -83,11 +77,10 @@ class Authentication extends Component {
                                 <label>Password</label>
                                 <input name='userPassword' type='password' value={password} onChange={this.handleChange}/>
                             </li>
-                            <button>Login</button>
                         </ul>
+                        <button>Login</button>
                     </AuthForm>
-                </>
-            </ThemeProvider>
+                </div>
         );
     }
 }
@@ -104,4 +97,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Authentication);
+export default withRouter( connect(mapStateToProps, mapDispatchToProps )(Authentication ) );

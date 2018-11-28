@@ -6,6 +6,11 @@ import { connect } from 'react-redux';
 
 // Import Global Styles
 import GloalStyles from './global_config/GlobalStyles/globalStyles';
+import defaultTheme from './global_config/Themes/defaultTheme';
+import landingPageTheme from './global_config/Themes/landingPageTheme';
+
+// Import HOC
+import Layout from './hoc/Layout';
 
 // Import Scenes
 import Home from './scences/Home/Home';
@@ -16,31 +21,34 @@ import Contact from './scences/Contact/Contact';
 
 class App extends Component {
     render() {
+        
         let routes = (
-            <Switch>
-                <Route path='/' exact component={Home} />
-                <Route path='/login/'  component={Authentication} />
-                <Route path='/contact-page/'  component={Contact} />
-                <Redirect to="/" />
-            </Switch>
+            <Layout theme={defaultTheme}>
+                <Switch>
+                    <Route path='/login'  component={Authentication} />
+                    <Route path='/contact-page' component={Contact} />
+                    <Route path='/' exact component={Home} />
+                    <Redirect to='/' />
+                </Switch>
+            </Layout>
         );
 
         if ( this.props.isAuthenticated ) {
             routes = (
-                <Switch>
-                    <Route path='/' exact component={Home} />
-                    <Route path='/login/'  component={Authentication} />
-                    <Route path='/contact-page/'  component={Contact} />
-                    <Route path='/landing-page/' component={LandingPage} />
-                </Switch>
+                <Layout theme={landingPageTheme}>
+                    <Switch>
+                        <Route path='/landing-page' exact component={LandingPage} />
+                        {/* Somethings off here since i need to add the auth component - TODO */}
+                        <Route path='/login'  component={Authentication} />
+                    </Switch>
+                </Layout>
             )
         }
+        
         return(
             <div>
                 <GloalStyles />
-                    <>
-                        {routes}
-                    </>
+                    {routes}
             </div>
         );
     }
@@ -52,4 +60,4 @@ const mapStateToProps = state => {
     };
 };
 
-export default withRouter(connect(mapStateToProps)(App));
+export default withRouter( connect( mapStateToProps )( App ) );
