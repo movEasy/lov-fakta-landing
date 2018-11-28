@@ -3,8 +3,8 @@
 import axios from 'axios';
 
 const firebaseConfig = {
-    apiKey: process.env.REACT_APP_FIREPASE_API_KEY,
-    url: process.env.REACT_APP_API_URL
+    apiKey: process.env.REACT_APP_apiKey,
+    url: process.env.REACT_APP_apiUrl
 }
 
 export const fetchApi = (payload = {}, method = 'post') => {
