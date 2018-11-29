@@ -56,7 +56,6 @@ const navigation = props => {
             <Link to="/">Home</Link>
             <Link to="/contact-page">Contact</Link>
             <Link to="/login">Login</Link>
-            <Button largeText inverted large>Login</Button>
         </nav>
     );
 
