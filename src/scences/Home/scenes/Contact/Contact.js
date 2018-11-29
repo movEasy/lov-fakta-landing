@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 import styled, { ThemeProvider } from 'styled-components';
 
 // import Theme
-import defaultTheme from '../../global_config/Themes/defaultTheme';
+import defaultTheme from '../../../../global_config/Themes/defaultTheme';
 
 // Import Components
 

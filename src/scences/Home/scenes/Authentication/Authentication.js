@@ -6,16 +6,50 @@ import { connect } from 'react-redux';
 import { Redirect, withRouter } from 'react-router-dom';
 
 // Import actions from services
-import * as actions from '../../services/index';
+import * as actions from '../../../../services/index';
+
+// Import styled components
+import Button from '../../../../components/Button/Button';
+
+const FormContainer = styled.div`
+    width: 100%;
+    display: flex;
+    margin-top: 2rem;
+`;
 
 const AuthForm = styled.form`
+    margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    width: 50rem;
+    height: 35rem;
+    /* box-shadow: 0.3rem 0.3rem 0.2rem black; */
 
     ul {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+    }
 
+    li {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 2rem;
+
+        input {
+            width: 90%;
+            height: 2.5rem;
+        }
     }
 
     button {
-
+        margin: 0 auto;
     }
 
 `;
@@ -65,22 +99,22 @@ class Authentication extends Component {
         }
 
         return (
-                <div>
+                <FormContainer>
                     {authRedirect}
                     <AuthForm onSubmit={this.submitHandler}>
                         <ul>
                             <li>
-                                <label>User Name</label>
-                                <input name='userEmail' type='text' value={email} onChange={this.handleChange}/>
+                                <label>Email</label>
+                                <input name='userEmail' type='email' value={email} onChange={this.handleChange}/>
                             </li>
                             <li>
                                 <label>Password</label>
                                 <input name='userPassword' type='password' value={password} onChange={this.handleChange}/>
                             </li>
+                            <Button primary medium mediumText>Login</Button>
                         </ul>
-                        <button>Login</button>
                     </AuthForm>
-                </div>
+                </FormContainer>
         );
     }
 }

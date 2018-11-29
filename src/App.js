@@ -16,8 +16,8 @@ import Layout from './hoc/Layout';
 // Import Scenes
 import Home from './scences/Home/Home';
 import LandingPage from './scences/LandingPage/LandingPage';
-import Authentication from './scences/Authentication/Authentication';
-import Contact from './scences/Contact/Contact';
+import Authentication from './scences/Home/scenes/Authentication/Authentication';
+import Contact from './scences/Home/scenes/Contact/Contact';
 
 
 class App extends Component {
