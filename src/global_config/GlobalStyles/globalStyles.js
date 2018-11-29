@@ -28,8 +28,8 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	body {
-		padding: 0;
-		margin: 0;
+		padding: 0 !important;
+		margin: 0 !important;
 		font-size: 1.5rem;
 		line-height: 2;
 		@import url('./fonts/roboto/Roboto-Bold.ttf');
