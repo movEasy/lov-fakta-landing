@@ -7,6 +7,7 @@ import styled from 'styled-components';
 import WelcomeScreen from './scenes/WelcomeScreen';
 import PriceScreen from './scenes/PriceScreen';
 import ProductPresenstationScreen from './scenes/ProductPresentationScreen';
+import Footer from './scenes/Footer';
 
 import Card from './components/statCard';
 
@@ -40,6 +41,7 @@ class LandingPage extends Component {
           </StatisticBar>
           <PriceScreen/>
           <ProductPresenstationScreen />
+          <Footer />
         </HomeContainer>
     )
   }

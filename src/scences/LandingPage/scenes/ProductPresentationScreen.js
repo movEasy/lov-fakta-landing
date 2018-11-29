@@ -113,12 +113,15 @@ class ProductPresentationScreen extends Component {
                         desc='Genkendelig værktøjer i opdateret udgave. Genkendelig værktøjer i opdateret udgave. Genkendelig værktøjer i opdateret udgave. Genkendelig værktøjer i opdateret udgave'
                     />
                 <ToolCard 
-                    title='Notebook'
+                    title='Timeline'
                         desc='Genkendelig værktøjer i opdateret udgave. Genkendelig værktøjer i opdateret udgave. Genkendelig værktøjer i opdateret udgave. Genkendelig værktøjer i opdateret udgave'
                     />
                 <ToolCard 
-                    title='Notebook'
-                        desc='Genkendelig værktøjer i opdateret udgave. Genkendelig værktøjer i opdateret udgave. Genkendelig værktøjer i opdateret udgave. Genkendelig værktøjer i opdateret udgave'
+                    title='Indlæg'
+                        desc='Genkendelig værktøjer i opdateret udgave.
+                        Genkendelig værktøjer i opdateret udgave.
+                        Genkendelig værktøjer i opdateret udgave. Genkendelig værktøjer 
+                        i opdateret udgave'
                     />
             </SectionCard>
       </ProdPresScreenContainter>

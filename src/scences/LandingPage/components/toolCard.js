@@ -7,7 +7,7 @@ const ToolCard = styled.div`
     display: flex;
     flex-direction: column;
     height: 30rem;
-    width: 25em;
+    width: 22em;
 `;
 
 const ToolHeader = styled.div`
@@ -31,9 +31,12 @@ const ToolDesc = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
      p {
         color: ${props => props.theme.secondary};
+        opacity: 0.7;
+        width: 80%;
     }
 `;
 

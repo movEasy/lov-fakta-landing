@@ -20,6 +20,7 @@ const Navigation = styled.div`
     a {
         color: ${ props => props.theme.primary };
         font-size: 1.4rem;
+        padding-left: 2rem;
     }
 
     h2 {
@@ -31,20 +32,16 @@ const Navigation = styled.div`
         flex: 1;
         display: flex;
         width: 100%;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
-
-        button {
-            margin-left: -2rem;
-        }
     }
 
     nav.landing-page__logged-in {
         flex: 1;
         display: flex;
         width: 100%;
-        justify-content: space-evenly;
         align-items: center;
+        justify-content: space-between;
 
         button {
             margin-left: -2rem;
