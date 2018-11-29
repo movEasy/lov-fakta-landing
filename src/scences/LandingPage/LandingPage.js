@@ -4,7 +4,8 @@ import React, { Component } from 'react'
 import styled from 'styled-components';
 
 // Import Scenes
-import WelcomeScreen from './scenes/welcomeScreen';
+import WelcomeScreen from './scenes/WelcomeScreen';
+import PriceScreen from './scenes/PriceScreen';
 
 import Card from './components/statCard';
 
@@ -21,8 +22,8 @@ const StatisticBar = styled.div`
     align-items: center;
     padding-left: 10rem;
     padding-right: 10rem;
-    background-color: ${ props => props.theme.primaryVariation };
-
+    background-color: ${ props => props.theme.primary };
+    box-shadow: 1rem 1rem 1rem white;
 `;
 
 class LandingPage extends Component {
@@ -36,6 +37,7 @@ class LandingPage extends Component {
             <Card number='19.365' name='Afgørelser' />
             <Card number='920' name='Opdaterede love' />
           </StatisticBar>
+          <PriceScreen/>
         </HomeContainer>
     )
   }
