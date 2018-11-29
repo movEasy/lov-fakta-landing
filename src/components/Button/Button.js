@@ -1,5 +1,3 @@
-import React from 'react'
-
 // Import styled
 import styled from 'styled-components';
 
@@ -36,11 +34,5 @@ const Button = styled.button`
         || (props.small && '1.5rem')
     };
 `;
-
-// const button = (props) => {
-//   return (
-//     <Button inverted>{props.text}</Button>
-//   )
-// }
 
 export default Button;

@@ -10,7 +10,7 @@ const SubCard = styled.div`
     display: flex;
     flex-direction: column;
     height: 45rem;
-    width: 27rem;
+    width: 30rem;
 `;
 
 const SubCardHeader = styled.div`
@@ -57,16 +57,26 @@ const SubCardInfo = styled.div`
     line-height: 2rem;
 
     p {
-        margin-top: 1rem;
+        margin-top: 2rem;
         margin-bottom: 1rem;
         font-weight: bold;
     }
 
     ul {
         margin-top: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 1.7rem;
         padding: 0;
-        list-style: inside; 
+        list-style: none;
+    }
+
+    ul li::before {
+        content: '✓';
+        padding-right: 1rem;
+        font-weight: bold;
+    }
+
+    button {
+        width: 100%;
     }
 `;
 
@@ -80,9 +90,10 @@ const subcriptionCard = (props) => {
           <p>{props.info}</p>
           <ul>
               {props.list.map(el => {
-                  return <li>el</li>
+                  return <li>{el}</li>
               })}
           </ul>
+          <Button primary large mediumText>{props.btnText}</Button>
       </SubCardInfo>
     </SubCard>
   )
