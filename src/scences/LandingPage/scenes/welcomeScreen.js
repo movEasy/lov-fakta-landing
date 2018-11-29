@@ -61,23 +61,26 @@ const WelcomeTrial = styled.div`
     }
 `;
 
+
 class WelcomeScreen extends Component {
   render() {
     return (
-      <WelcomeScreenContainer>
-        <WelcomeIntro>
-            <p className='first'>Velkommen</p>
-            <p className='second'>Opslagsværktøj for Dansk Lovgivning & Domme</p>
-            <p className='third'>- samt dit jurale community</p>
-        </WelcomeIntro>
-        <WelcomeTrial>
-            <Button primary large mediumText>30 dage gratis</Button>
-            <div>
-                <p>Start din gratis prøveperiode allerede i dag</p>
-                <p>- ingen binding, ingen begrænsninger</p>
-            </div>
-        </WelcomeTrial>
-      </WelcomeScreenContainer>
+        <>
+            <WelcomeScreenContainer>
+                <WelcomeIntro>
+                    <p className='first'>Velkommen</p>
+                    <p className='second'>Opslagsværktøj for Dansk Lovgivning & Domme</p>
+                    <p className='third'>- samt dit jurale community</p>
+                </WelcomeIntro>
+                <WelcomeTrial>
+                    <Button primary large mediumText>30 dage gratis</Button>
+                    <div>
+                        <p>Start din gratis prøveperiode allerede i dag</p>
+                        <p>- ingen binding, ingen begrænsninger</p>
+                    </div>
+                </WelcomeTrial>
+            </WelcomeScreenContainer>
+        </>
     )
   }
 }

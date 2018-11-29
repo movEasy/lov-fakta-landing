@@ -3,6 +3,7 @@ import { Switch, Route, withRouter, Redirect } from 'react-router-dom';
 
 // Import Redux packages
 import { connect } from 'react-redux';
+import * as actions from './services/index';
 
 // Import Global Styles
 import GloalStyles from './global_config/GlobalStyles/globalStyles';
@@ -20,6 +21,11 @@ import Contact from './scences/Contact/Contact';
 
 
 class App extends Component {
+
+    componentDidMount() {
+        this.props.checkAuthentication();
+    }
+
     render() {
         
         let routes = (
@@ -40,6 +46,7 @@ class App extends Component {
                         <Route path='/landing-page' exact component={LandingPage} />
                         {/* Somethings off here since i need to add the auth component - TODO */}
                         <Route path='/login'  component={Authentication} />
+                        <Redirect to='/landing-page' />
                     </Switch>
                 </Layout>
             )
@@ -60,4 +67,10 @@ const mapStateToProps = state => {
     };
 };
 
-export default withRouter( connect( mapStateToProps )( App ) );
+const mapDispatchToProps = dispatch => {
+    return {
+        checkAuthentication: () => dispatch(actions.authCheckState())
+    };
+};
+
+export default withRouter( connect( mapStateToProps, mapDispatchToProps )( App ) );

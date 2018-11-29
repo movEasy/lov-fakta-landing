@@ -18,11 +18,13 @@ const Card = styled.div`
     .card__paragraph--first {
         color: ${props => props.theme.white};
         font-size: 3.5rem;
-        font-weight: 500;
+        font-weight: 200;
+        opacity: 0.7;
     }
 
     .card__paragraph--second {
         color: ${props => props.theme.secondary};
+        opacity: 0.7;
     }
 `;
 
