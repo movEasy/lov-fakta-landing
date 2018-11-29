@@ -10,7 +10,6 @@ const PriceScreenContainer = styled.div`
     background-color: ${props => props.theme.primary};
     opacity: 0.97;
     padding-left: 7.5rem;
-    height: 100rem;
 `;
 
 const SectionInformation = styled.div`
@@ -63,7 +62,7 @@ class PriceScreen extends Component {
       <PriceScreenContainer>
         <SectionInformation>
             <h1>Konslideret lovgivning & gennemsigtig struktur</h1>
-            <p>Jural holder det simplet, du kan få adgang via 3 løsninger</p>
+            <p>Jural holder det simpelt, du kan få adgang via 3 løsninger</p>
         </SectionInformation>
         <SectionBillingContainer>
             <SubcriptionCard 

@@ -6,6 +6,7 @@ import styled from 'styled-components';
 // Import Scenes
 import WelcomeScreen from './scenes/WelcomeScreen';
 import PriceScreen from './scenes/PriceScreen';
+import ProductPresenstationScreen from './scenes/ProductPresentationScreen';
 
 import Card from './components/statCard';
 
@@ -38,6 +39,7 @@ class LandingPage extends Component {
             <Card number='920' name='Opdaterede love' />
           </StatisticBar>
           <PriceScreen/>
+          <ProductPresenstationScreen />
         </HomeContainer>
     )
   }
