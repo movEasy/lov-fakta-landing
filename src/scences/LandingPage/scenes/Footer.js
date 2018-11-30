@@ -34,7 +34,7 @@ class Footer extends Component {
   render() {
     return (
       <FooterContainer>
-        <h2>JURAL</h2>
+        <h2>Lov Fakta</h2>
         <FooterCompanyInfo>
             <p>Choose your country</p>
             <p>Company Information</p>

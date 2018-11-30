@@ -80,7 +80,7 @@ class ProductPresentationScreen extends Component {
     return (
       <ProdPresScreenContainter>
             <SectionInformation left>
-                <h1>Simple & Moderne brugerflade</h1>
+                <h1>Simpel & Moderne brugerflade</h1>
                 <p>Vi giver dig den bedste oplvelse og det bedste overblik</p>
             </SectionInformation>
             <SectionVideo>

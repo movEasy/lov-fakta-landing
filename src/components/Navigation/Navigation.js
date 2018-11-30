@@ -20,58 +20,53 @@ const Navigation = styled.div`
     a {
         color: ${ props => props.theme.primary };
         font-size: 1.4rem;
-        padding-left: 2rem;
     }
 
     h2 {
         color: ${ props => props.theme.primary };
-        flex: 2;
+        flex: 1 1 60%;
     }
 
-    nav.home__login {
-        flex: 1;
+    div.home__login {
+        flex: 1 0 40%;
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
     }
 
-    nav.landing-page__logged-in {
-        flex: 1;
+    div.landing-page__logged-in {
+        flex: 1 0 40%;
+        min-width: 40%;
         display: flex;
-        width: 100%;
         align-items: center;
         justify-content: space-between;
-
-        button {
-            margin-left: -2rem;
-        }
     }
 
 `;
 
 const navigation = props => {
     let navItems = (
-        <nav className='home__login'>
+        <div className='home__login'>
             <Link to="/">Home</Link>
             <Link to="/contact-page">Contact</Link>
             <Link to="/login">Login</Link>
-        </nav>
+        </div>
     );
 
     if (props.isAuth) {
         navItems = (
-            <nav className='landing-page__logged-in'>
+            <div className='landing-page__logged-in'>
                 <Link to="/lovgivning">Lovgivning</Link>
                 <Link to="/afgoerelser">Afgørelser</Link>
-                <Link to="/om-jural">Om JURAL</Link>
-                <Button largeText inverted large>Login</Button>
-            </nav>
+                <Link to="/om-jural">Om Lov Fakta</Link>
+                <Button mediumText inverted medium>Login</Button>
+            </div>
         );
     }
     return (
         <Navigation>
-            <h2>JURAL</h2>
+            <h2>Lov Fakta</h2>
             {navItems}
         </Navigation>
     );
