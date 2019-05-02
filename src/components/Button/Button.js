@@ -1,5 +1,20 @@
 // Import styled
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const ButtonClickSlide = keyframes`
+    0% {
+        background: white;
+    }
+    10% {
+        background: blue;
+    }
+    50% {
+        background: blue;
+    }
+    100% {
+        background: black;
+    }
+`;
 
 const Button = styled.button`
     text-align: center;
@@ -27,6 +42,7 @@ const Button = styled.button`
         || (props.medium && '9rem')
         || (props.small && '7rem')
     };
+    
 
     height: ${props => 
         (props.large && '5rem')
